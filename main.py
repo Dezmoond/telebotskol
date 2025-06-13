@@ -24,32 +24,32 @@ async def main():
     if not BOT_TOKEN:
         logger.error("BOT_TOKEN не найден! Создайте файл .env и добавьте BOT_TOKEN=your_token")
         return
-    
+
     # Создаем бота и диспетчер
     bot = Bot(token=BOT_TOKEN)
     storage = MemoryStorage()
     dp = Dispatcher(storage=storage)
-    
+
     # Импортируем роутеры здесь, чтобы избежать циклических импортов
     try:
         from bot.handlers.start import router as start_router
         from bot.handlers.lesson import router as lesson_router
         from bot.commands import set_bot_commands
-        
+
         # Регистрируем роутеры
         dp.include_router(start_router)
         dp.include_router(lesson_router)
-        
+
         # Устанавливаем команды бота
         await set_bot_commands(bot)
-        
+
     except ImportError as e:
         logger.error(f"Ошибка импорта обработчиков: {e}")
         return
-    
+
     logger.info("🤖 Бот запускается...")
     logger.info("🎯 Специализация: Английский для программистов и Data Science")
-    
+
     try:
         # Запускаем бота
         await dp.start_polling(bot)

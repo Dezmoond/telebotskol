@@ -62,9 +62,24 @@
         "current_pronunciation_slow_mode": false,
         "current_pronunciation_data": null
     },
-    "788612747": {
+    "471299622": {
+        "current_block": "writing",
+        "current_item": 0,
+        "completed_items": [],
+        "current_pronunciation_slow_mode": false,
+        "current_pronunciation_data": null
+    },
+    "7204467702": {
         "current_block": "terms",
-        "current_item": 1,
+        "current_item": 0,
+        "completed_items": [],
+        "current_pronunciation_slow_mode": false,
+        "current_pronunciation_data": null,
+        "current_pronunciation_text": "analyze"
+    },
+    "1141129597": {
+        "current_block": "pronunciation",
+        "current_item": 0,
         "completed_items": [],
         "current_pronunciation_slow_mode": false,
         "current_pronunciation_data": null

@@ -1,6 +1,5 @@
 import sys
 import os
-
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from aiogram import Bot
@@ -21,7 +20,7 @@ async def set_bot_commands(bot: Bot):
         BotCommand(command="writing", description="✍️ Письмо"),
         BotCommand(command="restart", description="🔄 Перезапуск урока"),
         BotCommand(command="help", description="❓ Помощь"),
-
+        
     ]
-
+    
     await bot.set_my_commands(commands, BotCommandScopeDefault())
